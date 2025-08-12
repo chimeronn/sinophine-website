@@ -1,0 +1,58 @@
+.player-container {
+  position: relative;
+  width: 440px;
+  height: 440px;
+}
+
+.album-art {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.art-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+.play-button {
+  position: absolute;
+  bottom: -445px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+.progress-background {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 10;
+}
+
+.progress-bar {
+  fill: none;
+  stroke: #ff2d55;
+  stroke-width: 10;
+  stroke-dasharray: 1256; /* 2π * 100 */
+  stroke-dashoffset: 1256;
+  transition: stroke-dashoffset 0.3s linear;
+}

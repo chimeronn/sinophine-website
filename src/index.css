@@ -1,0 +1,17 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.App {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 60px auto;
+        margin: 0px;
+        height: 100%;
+        background-color: #E8E7F5;
+      }
