@@ -30,7 +30,8 @@ const Carousel = ({searchQuery}) => {
             const params = new URLSearchParams();
             if(searchQuery) params.append("search", searchQuery);
 
-            const response = await fetch(`http://127.0.0.1:8080/get_tracks?${params.toString()}`);
+            const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8080/get_tracks';
+            const response = await fetch(`${apiBaseUrl}?${params.toString()}`);
             if(!response.ok) {
                 throw new Error('Failed to fetch songs');
             }
@@ -42,7 +43,7 @@ const Carousel = ({searchQuery}) => {
         }
     }
 
-    const baseUrl = "http://localhost:5173"
+    const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5173';
     const goToPlayer = (songName) => {
         window.location.href = baseUrl + "/" + songName;
     }
