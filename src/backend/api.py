@@ -7,8 +7,8 @@ from datetime import datetime
 
 app.secret_key = os.urandom(24)
 
-CLIENT_ID = "5a47a5f7e3b54f92b21565c221aada18"
-CLIENT_SECRET = "3d5aaa4a81cb4e4e9bdc07ad44306953"
+CLIENT_ID = os.environ['CLIENT_ID']
+CLIENT_SECRET = os.environ['CLIENT_SECRET']
 REDIRECT_URI = "http://127.0.0.1:8080/callback"
 SCOPE = "user-read-private user-read-email"
 
