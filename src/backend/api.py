@@ -46,7 +46,7 @@ def callback():
     # session['access_token'] = token_info['access_token']
     # print("ACCESS TOKEN SAVED:", session['access_token'])
 
-    access_token = token_info['access_token']
+    access_token = get_app_token()
     if not access_token:
         print("An error has occurred")
         return {"error": "Not authenticated"}, 401
