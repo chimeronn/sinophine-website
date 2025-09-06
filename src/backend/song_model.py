@@ -11,7 +11,7 @@ DBNAME = os.environ['DBNAME']
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql+psycopg2://{USERNAME}:{PASSWORD}@34.44.90.143:5432/{DBNAME}'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql+psycopg2://{USERNAME}:{PASSWORD}@34.122.16.214:5432/{DBNAME}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
